@@ -1,0 +1,31 @@
+-- Create database
+CREATE DATABASE student_db;
+
+-- Use database
+USE student_db;
+
+-- Create table
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    department VARCHAR(50)
+);
+
+-- Insert data
+INSERT INTO students VALUES
+(1, 'Grace', 20, 'CSE'),
+(2, 'Mercy', 19, 'CSE'),
+(3, 'Krupa', 18, 'AIML');
+
+-- View all students
+SELECT * FROM students;
+
+-- Update student age
+UPDATE students
+SET age = 21
+WHERE id = 1;
+
+-- Delete a student
+DELETE FROM students
+WHERE id = 2;
